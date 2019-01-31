@@ -8,5 +8,12 @@
     <p>Description: {{ description }} </p>
     <p>Maximum grade: {{ max_grade }}</p>
 
+    <ul>
+        {% for student, grade in all_grades %}
+        <li> <a href="/student?github={{student}}">{{ student }}</a> got a {{ grade }}</li>
+
+        {% endfor %}
+    </ul>
+
 </body>
 </html>
